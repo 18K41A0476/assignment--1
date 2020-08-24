@@ -1,0 +1,907 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Assignment-2",
+      "provenance": [],
+      "collapsed_sections": [],
+      "authorship_tag": "ABX9TyPoalynXq+T/hbdVBwfoqnB",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/18K41A0476/assignment--1/blob/master/Assignment%202\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "BGQLpZsM0OiX",
+        "colab_type": "code",
+        "colab": {}
+      },
+      "source": [
+        "# ASSIGNMENT-2"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "93gu8tMj0mUu",
+        "colab_type": "text"
+      },
+      "source": [
+        "**1**.**Given  the  lengths  of  three  sides  of  a  triangle**,**calculate  the  area  of the triangle**."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "EdC-jg4M01Yv",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 84
+        },
+        "outputId": "370e186a-68a4-4c99-df8e-b85812df7cf7"
+      },
+      "source": [
+        "a=int(input(\"enter length of 1st side: \"))\n",
+        "b=int(input(\"enter length of 2st side: \"))\n",
+        "c=int(input(\"enter length of 3st side: \"))\n",
+        "s=(a+b+c)/2\n",
+        "area=(s*(s-a)*(s-b)*(s-c))**(1/2)\n",
+        "print(\"area= \",round(area,2))"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "enter length of 1st side: 5\n",
+            "enter length of 2st side: 12\n",
+            "enter length of 3st side: 15\n",
+            "area=  26.53\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "ueF5mG_C5Ube",
+        "colab_type": "text"
+      },
+      "source": [
+        "**2**.**Take a string from end user and check if the value is** **palindrome or not**"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "8N14KfjR5c53",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 50
+        },
+        "outputId": "ddffb31f-468e-40f2-eebe-092daf4e8b01"
+      },
+      "source": [
+        "string=input((\"Enter a string: \"))\n",
+        "if(string==string[::-1]):\n",
+        "      print(\"The string is a palindrome\")\n",
+        "else:\n",
+        "      print(\"Not a palindrome\")"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Enter a string: malayalam\n",
+            "The string is a palindrome\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "jhGxcAI96pRf",
+        "colab_type": "text"
+      },
+      "source": [
+        "**3.**  **Write a program that reads a year from the user and** **displays a message Indicating whether or not it is a leap** **year**."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "nbIp0g-X63xx",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 50
+        },
+        "outputId": "2a714b48-d230-4c59-847d-1f75f2940205"
+      },
+      "source": [
+        "year=int(input(\"Enter year :\"))\n",
+        "if(year%4==0 and year%100!=0 or year%400==0):\n",
+        "  print(\"The year is a leap year\")\n",
+        "else:\n",
+        "  print(\"The year isn't a leap year\")"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Enter year :2020\n",
+            "The year is a leap year\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "RsFQoIzx8LpN",
+        "colab_type": "text"
+      },
+      "source": [
+        "4.**Take a string as input, and replaces spaces “ “  with hyphens **“-”, **and returns a string**.\n",
+        "\n",
+        "**Input** : “ **This program converts spaces into hyphen**”      \n",
+        "**Output**:“ **This-program-converts-spaces-into-hyphen**”"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "B9Xb3AjG8nqF",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 50
+        },
+        "outputId": "38c078de-fc3a-4d14-bb95-e566dc62e472"
+      },
+      "source": [
+        "str1= input(\"Enter the String : \")\n",
+        "str2=str1.replace(\" \", \"-\")\n",
+        "print(\"the string is: \",str2)"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Enter the String : this program converts spaces into hyphen\n",
+            "the string is:  this-program-converts-spaces-into-hyphen\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "QM25xgHOpxFm",
+        "colab_type": "text"
+      },
+      "source": [
+        "**5**. **Take  a  string  as  input  that  accepts  a  comma  separated**  **sequence  of  words as input and prints the unique** **words in sorted form (alphanumerically)**.\n",
+        "\n",
+        "***Input***: **orange, white, red, cyan, green, magenta, cyan, pink**, **white**\n",
+        "\n",
+        "***Output***: **cyan, green, magenta, orange, pink, red, white**"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "rZCT8wJaXGrD",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 218
+        },
+        "outputId": "2a0e732f-8ad5-4418-820c-ab880b93f62f"
+      },
+      "source": [
+        "lst=[]\n",
+        "n=int(input(\"enter number of elements: \"))\n",
+        "for i in range(0,n):\n",
+        "  elements=input()\n",
+        "  lst.append(elements)\n",
+        "\n",
+        "print(lst)\n",
+        "lst.sort()\n",
+        "\n",
+        "print(lst)\n"
+      ],
+      "execution_count": 102,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "enter number of elements: 9\n",
+            "orange\n",
+            "white\n",
+            "red\n",
+            "cyan\n",
+            "green\n",
+            "magenta\n",
+            "cyan\n",
+            "pink\n",
+            "white\n",
+            "['orange', 'white', 'red', 'cyan', 'green', 'magenta', 'cyan', 'pink', 'white']\n",
+            "['cyan', 'cyan', 'green', 'magenta', 'orange', 'pink', 'red', 'white', 'white']\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "ZJaVSJveqMct",
+        "colab_type": "text"
+      },
+      "source": [
+        "**6**.  **Tax CalculatorAsk  the  user  for  their  monthly  salary.  Calculate  whether  they  have  to  pay tax and if so, how much is that amount .Print the result**"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "C3_Z20u4qSwm",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 50
+        },
+        "outputId": "c490dc87-b187-49a0-e0e4-aff519ce6d92"
+      },
+      "source": [
+        "salary=int(input(\"Enter the salary : \"))\n",
+        "if (salary>=0) and (salary<=250000):\n",
+        "    tax=(salary*0)\n",
+        "elif (salary>250000) and (salary<=500000):\n",
+        "    tax=(salary*0.05)\n",
+        "elif (salary>500000) and (salary<=750000):\n",
+        "    tax=(salary*0.1)\n",
+        "elif (salary>750000) and (salary<=1000000):\n",
+        "    tax=(salary*0.15)\n",
+        "elif (salary>1000000) and (salary<=1250000):\n",
+        "    tax=(salary*0.2)\n",
+        "elif (salary>1250000) and (salary<=1500000):\n",
+        "    tax=(salary*0.25)\n",
+        "else:\n",
+        "    tax=(salary*0.3)\n",
+        "print(\"Tax is : \",tax)\n"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Enter the salary : 500000\n",
+            "Tax is :  25000.0\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "CNqpBMjgqT_W",
+        "colab_type": "text"
+      },
+      "source": [
+        "**7**.  **Take a list of integers as an argument, and converts it** **into a single integer (return the integer)**.\n",
+        "\n",
+        "**Input**: **[11, 33, 50]**\n",
+        "\n",
+        "**Output**: **113350**"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "wH7F8tzrqiYK",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "outputId": "46a6e04a-fef6-42b3-cf2c-a69338473bb1"
+      },
+      "source": [
+        "list = [11,33,50]  \n",
+        "for i in list: \n",
+        "    print(i, end=\"\") "
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "113350"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "_SMcIXRYqk4A",
+        "colab_type": "text"
+      },
+      "source": [
+        "**8**.**Create  a  program  that  reads  duration  from  the  user**  **as  a  number  of  days, hours,  minutes,  and  seconds.  Compute  and  display  the  total  number  of seconds** **represented by this duration**."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "5O-OVg14qyv1",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 101
+        },
+        "outputId": "5fdd55e0-fe4b-42ce-a445-1d57e57df516"
+      },
+      "source": [
+        "days = int(input(\" enter number of days: \")) * 3600 * 24\n",
+        "hours = int(input(\" enter number of hours: \")) * 3600\n",
+        "minutes = int(input(\" enter number of minutes: \")) * 60\n",
+        "seconds = int(input(\" enter number of seconds: \"))\n",
+        "total = days + hours + minutes + seconds\n",
+        "print(\"The  amounts of seconds\", total)\n"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            " enter number of days: 10\n",
+            " enter number of hours: 2\n",
+            " enter number of minutes: 20\n",
+            " enter number of seconds: 55\n",
+            "The  amounts of seconds 872455\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "-n_P22lOr3zW",
+        "colab_type": "text"
+      },
+      "source": [
+        "**9**.**Given  three  integers  (given  through  user  input)**,  **sort  the  numbers  using |min| and  |max| functions**."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "DTGZ9LcWP8D_",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 84
+        },
+        "outputId": "3e97b595-8119-4dc5-f5f3-22fcb6b8b217"
+      },
+      "source": [
+        "a=int(input(\"Enter the number of a:\"))\n",
+        "b=int(input(\"Enter the number of b:\"))\n",
+        "c=int(input(\"Enter the number of c:\"))\n",
+        "d=min(a,b,c)\n",
+        "e=max(a,b,c)\n",
+        "f=(a+b+c)-d-e\n",
+        "print(\"The Sorted order is:\",d,f,e)"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Enter the number of a:27\n",
+            "Enter the number of b:72\n",
+            "Enter the number of c:5\n",
+            "The Sorted order is: 5 27 72\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "DiDja0IKsBbN",
+        "colab_type": "text"
+      },
+      "source": [
+        "**10**.**Write  a  program  that  reads  a  date  from  the  user  and  computes  its immediate successor**. T**he date is the format YYYY-MM-DD. So, 2020-04-15 will have the successor 2020-04-16**."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "tgWlSDNUsNDj",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 84
+        },
+        "outputId": "4ed5f044-908b-4a6b-f531-f089e68ac53a"
+      },
+      "source": [
+        "year=int(input(\"Enter a year : \"))\n",
+        "if year%400== 0:\n",
+        "    leapyear=True\n",
+        "elif year%100==0:\n",
+        "    leapyear=False\n",
+        "elif year%4==0:\n",
+        "    leapyear=True\n",
+        "else:\n",
+        "    leapyear=False\n",
+        "month=int(input(\"Enter a month: \"))\n",
+        "if month in (1, 3, 5, 7, 8, 10, 12):\n",
+        "    monthlength=31\n",
+        "elif month==2:\n",
+        "    if leapyear:\n",
+        "        monthlength=29\n",
+        "    else:\n",
+        "        monthlength=28\n",
+        "else:\n",
+        "    monthlength=30\n",
+        "day=int(input(\"Enter a day: \"))\n",
+        "if day<monthlength:\n",
+        "    day+=1\n",
+        "else:\n",
+        "    day=1\n",
+        "    if month==12:\n",
+        "        month=1\n",
+        "        year+=1\n",
+        "    else:\n",
+        "        month+=1\n",
+        "print(\"The immediate successor is YYYY-MM-DD : %d-%d-%d.\" %(year,month,day))"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Enter a year : 2020\n",
+            "Enter a month: 4\n",
+            "Enter a day: 15\n",
+            "The immediate successor is YYYY-MM-DD : 2020-4-16.\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "b09a9SMKscaB",
+        "colab_type": "text"
+      },
+      "source": [
+        "**11**.**Compute product of a list of numbers [45 ,3,2,89,72,1,10,7]**\n",
+        "\n",
+        "**Output: 121111200**"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "W6WIsJ94smem",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "outputId": "bc51a358-459b-46eb-e84a-b9cdcc96d9c1"
+      },
+      "source": [
+        "lst=[45,3,2,89,72,1,10,7]\n",
+        "p=1\n",
+        "for i in range(len(lst)):\n",
+        "  p=p*lst[i]\n",
+        "print(p)"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "121111200\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "28UlbH-wsxFm",
+        "colab_type": "text"
+      },
+      "source": [
+        "**12**.**Compute given Num_list =  [5, 6,8 ,34,89,1] to get desired output**\n",
+        "\n",
+        "**Output: Out_list=[11,14,42,123,90]**"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "8oI6LBJKs4rV",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "outputId": "b7ebac3b-0b0a-4e76-ee22-e2f41dcc7828"
+      },
+      "source": [
+        "l=[5,6,8,34,89,1]\n",
+        "Out_list=[]\n",
+        "for i in range(len(l)-1):\n",
+        "    ol=l[i]+l[i+1]\n",
+        "    Out_list.append(ol)\n",
+        "print(\"Out_list=\",Out_list)\n"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Out_list= [11, 14, 42, 123, 90]\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "ecipdMgus6_O",
+        "colab_type": "text"
+      },
+      "source": [
+        "**13**.**Compute given Num_tuple =  (5, 6,8 ,3,9,1) to get desired output**.\n",
+        "\n",
+        "**Output: Out_list = [5, 30, 240, 720, 6480, 6480]**"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "LMkOdtlDtCpe",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "outputId": "49e1e74a-47e3-4a59-d5b6-8299b836d52a"
+      },
+      "source": [
+        "n=(5,6,8,3,9,1)\n",
+        "Out_list=[]\n",
+        "Out_list.append(n[0])\n",
+        "for i in range(len(n)-1):\n",
+        "  m=Out_list[i]*n[i+1]\n",
+        "  Out_list.append(m)\n",
+        "print(\"Out_list=\",Out_list)"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Out_list= [5, 30, 240, 720, 6480, 6480]\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "cw_R1CufP13T",
+        "colab_type": "text"
+      },
+      "source": [
+        "**14**.**Write a Python code that takes a number and returns a list of its digits**. **So for 586392 it should return [5,8,6,3,9,2]**"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "X4TlCHMbP2J_",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 50
+        },
+        "outputId": "d24c5253-a730-4c7d-ceaf-f5f84ecece59"
+      },
+      "source": [
+        "number=input(\"Enter a number: \")\n",
+        "list=[]\n",
+        "for n in range(len(number)):\n",
+        "    list.append(number[n])\n",
+        "    str(list)\n",
+        "    for i in range(0,len(list)):\n",
+        "      list[i]=int(list[i])\n",
+        "print(list)\n"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Enter a number: 586392\n",
+            "[5, 8, 6, 3, 9, 2]\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "HMqvv2jNTN0O",
+        "colab_type": "text"
+      },
+      "source": [
+        "**15**.**Write a program that finds the longest palindromic substring of a given string**"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "HXl5Tch8TN-0",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 50
+        },
+        "outputId": "a0974a2a-9359-48d6-fc3e-481acc34925e"
+      },
+      "source": [
+        "def longestpalindrome(n):\n",
+        "    d=[[False for i in range(len(n))] for i in range(len(n))]\n",
+        "    for i in range(len(n)):\n",
+        "        d[i][i]=True\n",
+        "    maxlen=1\n",
+        "    start=0\n",
+        "    for j in range(2,len(n)+1):\n",
+        "        for i in range(len(n)-j+1):\n",
+        "            end=i+j\n",
+        "            if j==2:\n",
+        "                if n[i]==n[end-1]:\n",
+        "                    d[i][end-1]=True\n",
+        "                    maxlen=j\n",
+        "                    start=i\n",
+        "            else:\n",
+        "                if n[i]==n[end-1] and d[i+1][end-2]:\n",
+        "                    d[i][end-1]=True\n",
+        "                    maxlen=j\n",
+        "                    start=i\n",
+        "    return n[start:start+maxlen]\n",
+        "n=input(\"Enter a string : \")\n",
+        "print(longestpalindrome(n))\n"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Enter a string : vineetha\n",
+            "ee\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "7ZmGGho_UcSC",
+        "colab_type": "text"
+      },
+      "source": [
+        "**16**. **Substring Check (Bug Funny)**\n",
+        "**Given two binary strings, A (of length 10) and B (of length 5)**, **output 1 if B is a substring of A and 0 otherwise**.\n",
+        "**First two lines of input**:\n",
+        "1010110010              10110           \n",
+        "1110111011              10011 \n",
+        "**First two lines of output**:1\n",
+        "                              0"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "d44sduhDUceu",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 67
+        },
+        "outputId": "ae376913-14bd-4f14-9498-c41d1c898ec0"
+      },
+      "source": [
+        "a=input(\"enter str1: \")\n",
+        "b=input(\"enter str2: \")\n",
+        "if b in a:\n",
+        "  print(1)\n",
+        "else:\n",
+        "   print(0) \n"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "enter str1: 1010110010\n",
+            "enter str2: 10110\n",
+            "1\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "37upJB6lUdfA",
+        "colab_type": "text"
+      },
+      "source": [
+        "**17**.  **POUR1 - Pouring waterGiven two vessels, one of which can accommodate a litres of water and the other - b litres   of   water,   determine   the   number   of   steps   required   to   obtain exactly c litres of water in one of the vessels**.\n",
+        "**At the beginning both vessels are empty. The following operations are counted as 'steps':emptying a vessel,filling a vessel,pouring water from one vessel to the other, without spilling, until one of the vessels is either full or empty**."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "Bh40jG5fUdvA",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 168
+        },
+        "outputId": "83d07fee-6a7b-44b9-f7e4-bc3f87857000"
+      },
+      "source": [
+        "def gcd(a,b):\n",
+        "    if b==0: \n",
+        "        return a \n",
+        "    return gcd(b,a%b) \n",
+        "def countsteps(a,b,c): \n",
+        "    v1=b\n",
+        "    v2=0\n",
+        "    count=1\n",
+        "    while ((v1 is not c) and (v2 is not c)): \n",
+        "        temp=min(v1,a-v2) \n",
+        "        v2=v2+temp \n",
+        "        v1=v1-temp \n",
+        "        count=count+1\n",
+        "        if ((v2==c)or(v1==c)): \n",
+        "            break\n",
+        "        if v1==0: \n",
+        "            v1=b \n",
+        "            count=count+1\n",
+        "        if v2==a: \n",
+        "            v2=0\n",
+        "            count=count+1\n",
+        "    return count \n",
+        "def ispossible(a,b,c): \n",
+        "    if a>b: \n",
+        "        temp=a \n",
+        "        a=b \n",
+        "        b=temp \n",
+        "    if c>b: \n",
+        "        return -1\n",
+        "    if (c%(gcd(b,a)) is not 0): \n",
+        "        return -1\n",
+        "    return(min(countsteps(b,a,c),countsteps(a,b,c)))\n",
+        "t=int(input(\"Enter no of testcases : \"))\n",
+        "for i in range(t):\n",
+        "  a=int(input(\"Enter capacity of vessel a : \"))\n",
+        "  b=int(input(\"Enter capacity of vessel b : \"))\n",
+        "  c=int(input(\"Enter capacity to be obtained :\"))\n",
+        "  print(\"Minimum number of steps required is : \",ispossible(a,b,c))"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Enter no of testcases : 2\n",
+            "Enter capacity of vessel a : 5\n",
+            "Enter capacity of vessel b : 2\n",
+            "Enter capacity to be obtained :3\n",
+            "Minimum number of steps required is :  2\n",
+            "Enter capacity of vessel a : 2\n",
+            "Enter capacity of vessel b : 3\n",
+            "Enter capacity to be obtained :4\n",
+            "Minimum number of steps required is :  -1\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "eCZHI8a2XZVO",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 168
+        },
+        "outputId": "f52c82ad-9a15-420c-9418-bb38fd8c4382"
+      },
+      "source": [
+        "lst=[]\n",
+        "n=int(input(\"enter number of elements: \"))\n",
+        "for i in range(0,n):\n",
+        "  elements=input()\n",
+        "  lst.append(elements)\n",
+        "print(lst)\n",
+        "lst.sort()\n",
+        "print(lst)\n"
+      ],
+      "execution_count": 99,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "number of strings: 7\n",
+            "yellow\n",
+            "pink\n",
+            "orange\n",
+            "white\n",
+            "violet\n",
+            "blue\n",
+            "red\n",
+            "['blue', 'orange', 'pink', 'red', 'violet', 'white', 'yellow']\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    }
+  ]
+}
